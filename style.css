@@ -1,0 +1,107 @@
+/* Applies to every element */
+* {
+  box-sizing: border-box; 
+  /* Ensures padding/border don’t mess up element width */
+}
+
+/* Basic page setup */
+body {
+  margin: 0; 
+  /* Removes default browser margin */
+  font-family: 'Poppins', sans-serif; 
+  /* Sets the font style */
+  background-color: #0a0a0a; 
+  /* Dark background for aesthetic look */
+  color: #fff; 
+  /* Text color white */
+  text-align: center; 
+  /* Centers header text */
+}
+
+/* Header styling */
+header {
+  padding: 2rem 0; 
+  /* Adds space above and below the title */
+}
+
+h1 {
+  font-weight: 500;
+  letter-spacing: 1px;
+  /* Slight letter spacing for clean look */
+}
+
+/* Gallery grid layout */
+.gallery {
+  display: grid;
+  /* Enables grid system */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Auto-adjusts number of columns based on screen width */
+  gap: 15px;
+  /* Space between images */
+  padding: 20px;
+  /* Adds padding around the grid */
+}
+
+/* Image styling */
+.gallery img {
+  width: 100%; 
+  /* Takes full width of its grid cell */
+  height: 250px; 
+  /* Fixed height for consistency */
+  object-fit: cover; 
+  /* Crops image neatly to fill box */
+  border-radius: 12px; 
+  /* Rounded corners */
+  transition: transform 0.3s, opacity 0.3s; 
+  /* Smooth animation for hover effects */
+  cursor: pointer; 
+  /* Changes cursor to hand on hover */
+}
+
+/* Hover animation */
+.gallery img:hover {
+  transform: scale(1.05); 
+  /* Zooms image slightly */
+  opacity: 0.8; 
+  /* Makes it a bit transparent */
+}
+
+/* Lightbox background (hidden by default) */
+.lightbox {
+  display: none; 
+  /* Hidden until an image is clicked */
+  position: fixed; 
+  /* Stays in place even when scrolling */
+  z-index: 1000; 
+  /* Ensures it appears above everything else */
+  padding-top: 80px; 
+  /* Pushes image slightly down */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  /* Dark overlay background */
+  justify-content: center;
+  align-items: center;
+  /* Centers the image */
+}
+
+/* The image inside lightbox */
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  /* Slight rounding for consistency */
+}
+
+/* Close button style */
+.close {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  /* White “×” close icon */
+}
