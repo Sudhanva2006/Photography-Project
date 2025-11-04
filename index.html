@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <!-- Declares the document type and language -->
+<head>
+  <meta charset="UTF-8"> 
+  <!-- Sets the character encoding so text displays correctly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes the site responsive on mobile screens -->
+  <title>My Photography Gallery</title>
+  <!-- Title of the web page (shown in browser tab) -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Links your CSS file for styling -->
+</head>
+
+<body>
+  <!-- All visible webpage content goes inside the body -->
+
+  <header>
+    <!-- Header section for the title or navigation -->
+    <h1>My Photography Gallery 📸</h1>
+    <!-- Main heading text -->
+  </header>
+
+  <section class="gallery">
+    <!-- Section that holds all your photos in a grid -->
+    <img src="images/RAIN WISHMASTER.jpg" alt="Frog Eye">
+    <img src="images/THE BEE.jpg" alt="Aesthetic bee">
+    <img src="images/THE BLACK.jpg" alt="Dragonfly">
+    <img src="images/THE FLOWER.jpg" alt="Flying flower">
+    <img src="images/THE KING OF GARDEN.jpg" alt="Garden Lizard">
+    <img src="images/THE MACRO DRAGON.jpg" alt="Dragonfly">
+    <img src="images/THE MOTH.jpg" alt="A moth">
+    <img src="images/THE PEST 2.0.jpg" alt="A beetle">
+    <img src="images/THE PEST.jpgjpg" alt="A beetle">
+    <img src="images/THE ROBBER.jpg" alt="Robber Fly">
+    <img src="images/THE VAIN.jpg" alt="A moth">
+    <img src="images/THE WEB DESIGNER.jpg" alt="A spyder">
+
+
+    <!-- Each image represents one photo in the gallery -->
+  </section>
+
+  <!-- Lightbox container (hidden by default, appears when photo is clicked) -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <!-- “×” symbol to close the lightbox -->
+    <img class="lightbox-img" id="lightbox-img">
+    <!-- Enlarged image displayed here when clicked -->
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Links your JavaScript file that handles click events -->
+</body>
+</html>
